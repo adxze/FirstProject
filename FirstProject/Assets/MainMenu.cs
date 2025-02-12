@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public Animator animator;
     public void startGame()
     {
         SceneManager.LoadSceneAsync(1);
@@ -13,4 +14,16 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadSceneAsync(2);
     }
+    public void mainGame()
+    {
+        SceneManager.LoadSceneAsync(0);
+
+    }
+    public void attack()
+    {
+        animator.SetBool("boolattack", true);
+        animator.SetTrigger("triggerattack");
+        
+    }
+
 }
